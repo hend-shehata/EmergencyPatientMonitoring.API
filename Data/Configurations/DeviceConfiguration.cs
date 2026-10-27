@@ -15,5 +15,6 @@ public class DeviceConfiguration : IEntityTypeConfiguration<Device>
 
         b.HasOne(x => x.ManagedByAdmin).WithMany(a => a.ManagedDevices)
      .HasForeignKey(x => x.ManagedByAdminId).OnDelete(DeleteBehavior.NoAction);
+
     }
 }
